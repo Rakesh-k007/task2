@@ -1,7 +1,8 @@
+
 import { useState } from 'react';
-import Counter from './counter';
-import CounterButtonFunc from './CounterButtonFunc';
-import ButtonClickHandler from './ButtonClickHandler';
+import Counter from './counter.jsx';
+import CounterButtonFunc from './CounterButtonFunc.jsx';
+import ButtonClickHandler from './ButtonClickHandler.jsx';
 
 function App() {
   const [selectedProgram, setSelectedProgram] = useState(null);
@@ -14,33 +15,38 @@ function App() {
 
       <ul>
         <li>
-          <a href="#counter" onClick={() => setSelectedProgram('counter')}>
+          <a
+            href="#counter"
+            onClick={() => setSelectedProgram('counter')}
+          >
             Counter Class
           </a>
         </li>
 
         <li>
-          <a href="#useState" onClick={() => setSelectedProgram('useState')}>
+          <a
+            href="#useState"
+            onClick={() => setSelectedProgram('useState')}
+          >
             Counter using useState
           </a>
         </li>
 
         <li>
-          <a href="#click" onClick={() => setSelectedProgram('click')}>
+          <a
+            href="#click"
+            onClick={() => setSelectedProgram('click')}
+          >
             Button Click Event
           </a>
         </li>
-
-  
       </ul>
 
-      <hr />
+      <hr/>
 
       <div style={{ marginTop: '30px' }}>
         {selectedProgram === 'counter' && <Counter />}
-
         {selectedProgram === 'useState' && <CounterButtonFunc />}
-
         {selectedProgram === 'click' && <ButtonClickHandler />}
 
         {selectedProgram === null && (
